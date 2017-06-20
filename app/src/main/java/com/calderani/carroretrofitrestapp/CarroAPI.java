@@ -1,0 +1,24 @@
+package com.calderani.carroretrofitrestapp;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.http.Body;
+import retrofit2.http.DELETE;
+import retrofit2.http.GET;
+import retrofit2.http.POST;
+
+/**
+ * Created by logonrm on 19/06/2017.
+ */
+
+public interface CarroAPI {
+    @POST("/carros")
+    Call<Void> criar(@Body Carro carro);
+
+    @GET("/carros")
+    Call<List<Carro>> listar();
+
+    @DELETE("/carros")
+    Call<Void> excluir(@Body Carro carro);
+}
