@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 for (Carro carro : response.body()) {
                     //Log.i("Carro:", carro.getMarca());
                     String conteudo = tv.getText().toString();
-                    tv.setText(conteudo + "\nModelo: " + carro.getModelo());
+                    tv.setText(conteudo + "\r\nModelo: " + carro.getModelo());
                     tv.setText(conteudo + " Marca: " + carro.getMarca());
                     tv.setText(conteudo + " Cor: " + carro.getCor());
                 }
